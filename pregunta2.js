@@ -15,7 +15,22 @@
   }
 
 const sale = function (article, cant){
-  
+  if (article == "shoes" && cant <= inventory.shoes){
+    inventory.shoes -= cant;
+    return 200;
+  } else if (article == "pants" && cant <= inventory.pants) {
+      inventory.pants -= cant;
+      return 200;
+  }else if (article == "shirts" && cant <= inventory.shirts) {
+    inventory.shirts -= cant;
+    return 200;
+  }else if (article == "socks" && cant <= inventory.socks) {
+    inventory.socks -= cant;
+    return 200;
+  }else {
+    return 500;
+  }
+
 }
 
 // TESTS (no modificar)

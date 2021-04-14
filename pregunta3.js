@@ -3,7 +3,20 @@
 // si la longitud del array es < 3 se debe retornar undefined
 
 const greater3 = nums => {
-    
+
+    if( nums.length >= 3){
+       console.log(nums.sort(function(a,b) {return b-a}));
+        return nums[2];
+    } else {
+        return undefined;
+    }
+   /* if(nums.length < 3){
+        return undefined;
+    } else{
+      nums.sort(function(a,b) {return a-b});
+        return nums[2];
+        
+    }*/
 }
 
 
